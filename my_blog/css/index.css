@@ -1,0 +1,211 @@
+:root{
+    --green:#27ae60;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+
+    --premary-color:#666;
+    --secondly-color:#fff;
+}
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;  
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+
+}
+header{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+     background-color: var(--secondly-color);
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    
+    
+}
+body{
+   
+    background-color:var(--secondly-color) ;
+
+}
+.logo{
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.logo{
+    color: var(--green);
+}
+.nav-bar a{
+    font-size: 1rem;
+    padding: .5em 1.5em;
+   color: var(--premary-color);
+}
+
+.nav-bar a:hover{
+    font-weight: bold;
+    border-bottom:2.5px solid;
+    border-color: var(--green);
+} 
+#icon{
+    width: 30px;
+    cursor: pointer;
+    
+}
+
+
+.icons i{
+    cursor: pointer;
+     margin-left: .5rem;
+     height: 2rem;
+     line-height: 2rem;
+     width: 1.7rem;
+     text-align: center;
+    font-size: 1.3rem;
+    
+    /*border-radius: 50%;*/
+    /*color: var(--black);*/
+    
+} 
+.icons i:hover{
+    color: blueviolet;
+    transform: scale(1.3);
+    }
+.icons #menu-bar{
+    display: none;
+}
+#nav-check,.nav-btn{
+    display: none; 
+}
+@media screen and (max-width:900px) {
+        .nav-btn{
+            display: inline-block;
+            position: absolute;
+            top: -5px;
+            right: 0px;
+        }
+        .nav-btn label{
+            display:inline-block ;
+            width: 80px;
+            height:70px;
+            padding: 25px;
+         }
+        .nav-btn label span{
+            display: block;
+            height: 10px;
+            width: 25px;
+            border-top: 3px solid rgb(78, 73, 97);
+        }
+        .nav-btn label:hover, #nav-check:checked ~ .nav-btn label{
+            background-color: #238d43;
+        }
+        #nav-check:not(:checked) ~ .nav-bar{
+            height: 0px;   
+        }
+        #nav-check:checked ~ header{
+            height: calc(100vh - 70px);  
+            overflow-y: auto; 
+        }
+
+    .icons #menu-bar{
+        display:inline-block;
+    }
+   .nav-bar
+    {
+    position: absolute;
+    display: block;
+    text-align: center ;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--secondly-color);
+    padding:6rem;
+   
+    /* clip-path: polygon(0 0,100% 0,100% 0,0 0 ); */
+    }
+    .nav-bar a{
+        display: block;
+        padding: 2rem .5rem;
+        font-size: 1rem;
+        /* background: rgba(148, 147, 147, .10); */
+        text-align: center;
+      
+    }   
+    .nav-bar a.active{
+        border-bottom: none;  
+    }
+    .nav-bar a:hover{
+        /* padding: 1rem; */
+        /* padding-left: 3rem; */
+        color: #eee;
+        border-bottom: none;
+        border-radius: 20px;
+       background: #27ae60;
+    }
+}    
+        
+.cover-image{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/body.jpg);
+}
+
+.img-profil img{ 
+     position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    height: 10rem;
+    width: 10rem;
+}
+.description{
+ 
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 7rem;
+    width:60rem;
+    margin: auto;
+
+}
+.description h2{
+    text-align: center;
+}
+.description p{
+    text-align: center;
+    font-size: 15px;
+    color: var(--light-color);
+    font-family:sans-serif;
+}
+.nav-footer{
+    position: relative;
+    display: block;
+    left: 0;
+     right: 0;
+    bottom: 0;
+    top:9.6rem ;
+    
+    background:rgba(149, 149, 170, .4);
+}
+
+.nav-footer {
+    text-align: center;
+}
+
+
